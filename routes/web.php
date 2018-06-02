@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::auth();
+
 
 /*Route::group(['middleware' => ['auth']], function () {
 	Route::get('/', ['as' => 'house.index', 'uses' => 'HomeController@index']);
