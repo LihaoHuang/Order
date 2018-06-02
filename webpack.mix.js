@@ -22,15 +22,6 @@ mix.webpackConfig({
 
 mix.js([
     'resources/assets/js/app',
-    'resources/assets/js/template/bootstrap.bundle.min',
-    'resources/assets/js/template/jquery.easing.min',
-    'resources/assets/js/template/Chart.min',
-    'resources/assets/js/template/sb-admin.min',
-    'resources/assets/js/template/sb-admin-charts.min',
-],'public/js/bundle/template.bundle.js');
-
-
-mix.js([
     'node_modules/velocity-animate/velocity.min',
     'node_modules/velocity-animate/velocity.ui.min',
     'resources/assets/js/index'

@@ -20,3 +20,12 @@ window.Vue = require('vue');
 // const app = new Vue({
 //     el: '#app'
 // });
+
+import HomeTable from './components/HomeTable.vue';
+
+const result = new Vue({
+    el: '#result',
+    components: {
+        'home-table': HomeTable
+    }
+});

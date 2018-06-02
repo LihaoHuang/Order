@@ -56,13 +56,29 @@
             </div>
         </div>
     </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="{{ asset('js/Chart.min.js') }}"></script>
+    {{--<script src="{{ asset('js/jquery.dataTables.js') }}"></script>--}}
+    {{--<script src="{{ asset('js/dataTables.bootstrap4.js') }}"></script>--}}
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('js/sb-admin.min.js') }}"></script>
+
+    <!-- Custom scripts for this page-->
+    {{--<script src="{{ asset('js/sb-admin-datatables.min.js') }}"></script>--}}
+    <script src="{{ asset('js/sb-admin-charts.min.js') }}"></script>
 
     {{--mix--}}
-        <script src="{{ asset('js/bundle/manifest.js') }}"></script>
-        <script src="{{ asset('js/bundle/vendor.js') }}"></script>
-        <script src="{{ asset('js/bundle/template.bundle.js') }}"></script>
-
-        @yield('bundle')
+    <script src="{{ asset('js/bundle/manifest.js') }}"></script>
+    <script src="{{ asset('js/bundle/vendor.js') }}"></script>
+    @yield('bundle')
 </body>
 @include('layouts.show_error')
 </html>

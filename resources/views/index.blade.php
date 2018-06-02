@@ -150,69 +150,36 @@
                     </div>
                 </div>
                 <!-- /Card row-->
-                
-                <div class="row">
-                    <div class="col-xl-9 col-sm-12">
-                        <!-- Example DataTables Card-->
-                        <div class="card mb-3">
-                            <div class="card-header">
-                                <i class="fa fa-table"></i> 美食餐廳
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                        <tr>
-                                            <th>店名</th>
-                                            <th>地址</th>
-                                            <th>我要訂購</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @for ($i=0; $i<50; $i++)
-                                            <tr>
-                                                <td>虎尾年糕<span class="badge badge-primary">小吃</span></td>
-                                                <td>雲林縣虎尾鎮中正路001號</td>
-                                                <td><a class="btn btn-primary" href="/{{$i}}" h>我要訂購</button></td>
-                                            </tr>
-                                        @endfor
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+            <div class="row" id="result">
+                <home-table :rows="{{ $stores->toJson(JSON_UNESCAPED_UNICODE) }}"></home-table>
+
+                <div class="col-xl-3 col-sm-12">
+                    <!-- Example Notifications Card-->
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fa fa-bell-o"></i> 網友私心推薦
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-12">
-                        <!-- Example Notifications Card-->
-                        <div class="card mb-3">
-                            <div class="card-header">
-                                <i class="fa fa-bell-o"></i> 網友私心推薦
-                            </div>
-                            <div class="list-group list-group-flush small">
-                                @for($i=0; $i<10;$i++)
-                                    <a class="list-group-item list-group-item-action" href="#">
-                                        <div class="media">
-                                            <img class="d-flex mr-3 rounded-circle"
-                                                 src="https://picsum.photos/45/45?image={{240+$i*10}}" alt="">
-                                            <div class="media-body">
-                                                雲林縣虎尾鎮 <strong>虎尾米糕</strong>
-                                            </div>
+                        <div class="list-group list-group-flush small">
+                            @for($i=0; $i<10;$i++)
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    <div class="media">
+                                        <img class="d-flex mr-3 rounded-circle"
+                                             src="https://picsum.photos/45/45?image={{240+$i*10}}" alt="">
+                                        <div class="media-body">
+                                            雲林縣虎尾鎮 <strong>虎尾米糕</strong>
                                         </div>
-                                    </a>
-                                @endfor
-                            </div>
+                                    </div>
+                                </a>
+                            @endfor
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- /.container-fluid-->
-            <!-- /.content-wrapper-->
-            <script>
-                var data = {!! $stores->toJson() !!};
-            </script>
-@endsection
-
-@section('bundle')
-    <script src="{{ asset('js/bundle/index.bundle.js') }}"></script>
+        </div>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        @endsection
+        @section('bundle')
+            <script src="{{ asset('js/bundle/index.bundle.js') }}"></script>
 @endsection
