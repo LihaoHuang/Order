@@ -165,7 +165,7 @@
                                 <tr>
                                   <td>虎尾年糕<span class="badge badge-primary">小吃</span></td>
                                   <td>雲林縣虎尾鎮中正路001號</td>
-                                  <td><a class="btn btn-primary" href="/{{$i}}"h>我要訂購</button></td>
+                                  <td><a class="btn btn-primary" href="/store/{{$i}}">我要訂購</button></td>
                                 </tr>
                                 @endfor
                               </tbody>
