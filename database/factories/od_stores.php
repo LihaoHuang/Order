@@ -25,7 +25,7 @@ $factory->define(od_stores::class, function (Faker $faker) {
         'address' => $faker->address,
         'phone' => '0'.$faker->randomNumber(2).'-'.$faker->randomNumber(7),
         'user_id' => $faker->numberBetween(1, $dataNumber),
-        'classify' => $faker->randomElement(array('食物','飲料')),
+        'classify' => $faker->randomElement(array('中餐','飲料','早午餐','西餐','冰品','隱藏美食','甜點','小吃')),
         'create_at' => $createDate,
         'update_at' => $modifyDate
     ];
