@@ -43,9 +43,9 @@ class ReceiptController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function invite($id)
+    public function invite()
     {
-        //
+        return view('invite');
     }
 
     /**
@@ -54,8 +54,9 @@ class ReceiptController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function inviteStore($id)
+    public function inviteStore(Request $request)
     {
-        //
+        $data = $request->all();
+        dd($data);
     }
 }
