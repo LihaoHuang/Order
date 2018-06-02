@@ -69,7 +69,6 @@ class ReceiptController extends Controller
     public function inviteStore(Request $request)
     {
         $data = $request->all();
-        // dd($data["invite_code"]);
 
         return redirect()->route('receipt.index', $data["invite_code"])->with("message", "成功進入系統!");
     }

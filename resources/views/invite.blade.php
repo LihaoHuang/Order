@@ -14,14 +14,14 @@
         <div class="col-1">
         </div>
         <div class="col-10">
-          <form action='{{ route('receipt.inviteStore') }}' class="form-signin" method="post">
-             {{ csrf_field() }} 
+          {{ Form::open(['method' => 'post','route' => 'receipt.inviteStore', 'class' => 'form-signin']) }}
+
               <div class="form-group">
-                <label for="invite_code">邀請碼輸入</label>
-                <input type="number" class="form-control" id="invite_code" name="invite_code" placeholder="請輸入6位驗證數字" required pattern="banana|cherry"/>
+                {{ Form::label('invite_code','邀請碼輸入') }}
+                {{ Form::text('invite_code',null,['class' => 'form-control', 'id' => 'invite_code', 'placeholder' => '請輸入6位驗證數字', 'required', 'pattern' => '\d{6}','maxlength'=>'6','title' => '數字6碼'])}}
               </div>
-              <button class="btn btn-success" type="submit">輸入</button>
-          </form>
+            {{ Form::submit('輸入',['class' => 'btn btn-success'])  }}
+          {{ Form::close() }}
         </div>
         <div class="col-1">
         </div>
