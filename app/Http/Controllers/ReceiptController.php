@@ -46,7 +46,7 @@ class ReceiptController extends Controller
     {
         //
         $receipt_id = 111111;
-        return redirect()->route('receipt.index',$receipt_id);
+        return redirect()->route('receipt.index', $receipt_id)->with("message", "訂購成功，請向負責人付款 50 元!");
     }
 
     /**
