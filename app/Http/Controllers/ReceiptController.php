@@ -45,6 +45,8 @@ class ReceiptController extends Controller
     public function store(Request $request)
     {
         //
+        $receipt_id = 111111;
+        return redirect()->route('receipt.index',$receipt_id);
     }
 
     /**
