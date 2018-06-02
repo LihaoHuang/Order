@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="/receipt/{{Auth::user()->id}}">
+          <a class="nav-link" href="/receipt/9">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">我的訂單</span>
           </a>

@@ -15,7 +15,7 @@
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
                     <div class="card-header">
                         <h3 style="display:inline">虎尾米糕</h3> 訂單號碼 - {{123456}} (05:31:22)
-                        <a href="/receipt/1/create" style="float:right" class="btn btn-primary">我要訂購</a>
+                        <a href="/detail" style="float:right" class="btn btn-primary">我要訂購</a>
                     </div>
                     <div class="card-body">
                         <style type="text/css">

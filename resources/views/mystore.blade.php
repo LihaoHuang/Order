@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header">店家資訊<button style="float:right" class="btn btn-primary">店家編輯</button></div>
+                    <div class="card-header">店家資訊<a style="float:right" class="btn btn-primary" href="{{ route('store.edit', 1) }}">店家編輯</a></div>
                     <div class="card-body">
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
                             <tr>
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header">菜單<button style="float:right" class="btn btn-primary">菜單編輯</button></div>
+                    <div class="card-header">菜單<a style="float:right" class="btn btn-primary" href="{{ route('store.editMenu', 1) }}">菜單編輯</a></div>
                     <div class="card-body">
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飯食</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
