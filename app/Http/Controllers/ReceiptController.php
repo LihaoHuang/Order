@@ -29,9 +29,9 @@ class ReceiptController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function invite_show()
+    public function invite_show($invite_code)
     {
-        //
+        return view('receipt_show');
     }
 
     /**
@@ -87,11 +87,11 @@ class ReceiptController extends Controller
     {
         $data = $request->except('_token');
 
-        $receipt = $this->receiptService->getByInvite($data['invite_code']);
+        $invite_code = $this->receiptService->getByInvite($data['invite_code']);
 
-        if(is_null($receipt))
+        if(is_null($invite_code))
             return back()->withErrors(['msg' => '無效邀請碼']);
 
-        return redirect()->route('receipt.index', $receipt->id)->with("message", "成功進入系統!");
+        return redirect()->route('receipt.invite_show', $invite_code->id)->with("message", "成功進入系統!");
     }
 }
