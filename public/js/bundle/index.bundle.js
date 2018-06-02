@@ -14045,11 +14045,25 @@ window.Vue = __webpack_require__(14);
 
 
 
+var type = new Vue({
+    el: "#type",
+    methods: {
+        select: function select(type) {
+            result.sendKey(type);
+        }
+    }
+});
+
 var result = new Vue({
-  el: '#result',
-  components: {
-    'home-table': __WEBPACK_IMPORTED_MODULE_0__components_HomeTable_vue___default.a
-  }
+    el: '#result',
+    components: {
+        'home-table': __WEBPACK_IMPORTED_MODULE_0__components_HomeTable_vue___default.a
+    },
+    methods: {
+        sendKey: function sendKey(type) {
+            this.$refs.result.selectType(type);
+        }
+    }
 });
 
 /***/ }),
@@ -36163,7 +36177,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -36273,15 +36287,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (this.keyword !== "") {
                 var key = this.keyword;
                 tmp = tmp.filter(function (row) {
-                    return row.address.includes(key);
+                    return row.address.includes(key) || row.name.includes(key) || row.classify.includes(key);
                 });
             }
+
             return tmp;
         }
     },
     methods: {
         updatePages: function updatePages(data) {
             this.pages = data;
+        },
+        selectType: function selectType(type) {
+            this.keyword = type;
         }
     },
     beforeMount: function beforeMount() {
@@ -36786,6 +36804,7 @@ var render = function() {
                 ],
                 staticClass: "form-control",
                 attrs: {
+                  id: "keyword",
                   type: "text",
                   name: "keyword",
                   placeholder: "輸入查詢字串"
