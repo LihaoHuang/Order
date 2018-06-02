@@ -51,5 +51,5 @@
 
   </div>
 </body>
-
+@include('layouts.show_error')
 </html>

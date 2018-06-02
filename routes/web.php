@@ -53,7 +53,7 @@ Route::post('invite', ['as' => 'receipt.inviteStore', 'uses' => 'ReceiptControll
 // Authentication Routes...
 Route::get('login', 'AuthController@showLoginForm')->name('login');
 Route::post('login', 'AuthController@login');
-Route::post('logout', 'AuthController@logout')->name('logout');
+Route::get('logout', 'AuthController@logout')->name('logout');
 
 // Registration Routes...
 Route::get('register', 'AuthController@showRegistrationForm')->name('register');
@@ -64,34 +64,3 @@ Route::get('password/reset', 'AuthController@showLinkRequestForm')->name('passwo
 Route::post('password/email', 'AuthController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'AuthController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'AuthController@reset');
-
-
-
-
-Route::get('/charts', function () {
-    return view('example.charts');
-});
-
-Route::get('/tables', function () {
-    return view('example.tables');
-});
-
-Route::get('/blank', function () {
-    return view('example.blank');
-});
-
-Route::get('/cards', function () {
-    return view('example.cards');
-});
-
-Route::get('/login', function () {
-    return view('example.login');
-});
-
-Route::get('/register', function () {
-    return view('example.register');
-});
-
-Route::get('/forgot-password', function () {
-    return view('example.forgot-password');
-});

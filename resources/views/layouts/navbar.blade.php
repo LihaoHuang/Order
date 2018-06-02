@@ -194,8 +194,13 @@
           </form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        @if(Auth::check())
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+          @else
+            <a href="{{ route('login') }}" class="nav-link">
+            <i class="fa fa-fw fa-sign-in"></i>Login</a>
+        @endif
         </li>
       </ul>
     </div>

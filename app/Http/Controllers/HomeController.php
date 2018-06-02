@@ -9,11 +9,10 @@ class HomeController extends Controller
     /**
      * @var model
      */
-    
+
 
     /**
      * HomeController constructor.
-     * @param User_info $user_info
      */
     public function __construct()
     {
