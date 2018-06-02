@@ -27,17 +27,18 @@
                         <table style="width:100%;" cellpadding="10" border='1'>
                             <tr style="background: gray">
                                 <th width="30%">訂單負責人</th>
-                                <td colspan="3" style="text-align:right;">{{$receipt->od_users->name}}</td>
+                                <td colspan="2" style="text-align:right;">{{$receipt->od_users->name}}</td>
                             </tr>
                             @foreach($receipt->od_details as $key => $detail)
                                 <tr>
-                                    <th width="30%">{{ $detail->od_menus->food_name }} * {{ $detail->num }}</th>
-                                    <td>{{ $detail->od_menus->cost }}元</td>
+                                    <th width="30%">{{ $detail->od_menus->food_name }}</th>
+                                    <td>數量：{{ $detail->num }}</td>
+                                    <td>共計：{{ $detail->od_menus->cost }}元</td>
                                 </tr>
                             @endforeach
                             <tr style="background: gray">
                                 <th>目前總計</th>
-                                <td colspan="3" style="text-align:right;">{{ $detail->od_menus->cost * $detail->num }}元</th>
+                                <td colspan="2" style="text-align:right;">{{ $detail->od_menus->cost * $detail->num }}元</th>
                             </tr>
                         </table>
                     </div>
