@@ -9,7 +9,7 @@
                 <div class="table-responsive">
                     <div class="form-group">
                         <label for="keyword">搜尋</label>
-                        <input type="text" class="form-control" name="keyword" v-model="keyword" placeholder="輸入查詢字串">
+                        <input id='keyword' type="text" class="form-control"  name="keyword" v-model="keyword" placeholder="輸入查詢字串">
                     </div>
 
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -59,15 +59,19 @@
                 if(this.keyword !== ""){
                     let key = this.keyword;
                     tmp = tmp.filter(function(row){
-                        return row.address.includes(key);
+                        return row.address.includes(key) || row.name.includes(key) || row.classify.includes(key);
                     });
                 }
+
                 return tmp;
             }
         },
         methods: {
             updatePages(data){
                 this.pages = data;
+            },
+            selectType(type){
+                this.keyword = type;
             }
         },
         beforeMount(){
