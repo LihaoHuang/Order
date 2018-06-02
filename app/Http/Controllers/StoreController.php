@@ -52,9 +52,15 @@ class StoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($store_id)
     {
         //
+        return view('mystore_edit');
+    }
+
+    public function editMenu()
+    {
+        return view('mystore_edit_menu');
     }
 
     /**
@@ -62,9 +68,10 @@ class StoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update($store_id)
     {
         //
+        return redirect()->route('store.mystore', $store_id);
     }
 
     /**

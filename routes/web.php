@@ -32,6 +32,7 @@ Route::prefix('store')->group(function () {
 
 
 	Route::get('{store_id}/edit', ['as' => 'store.edit', 'uses' => 'StoreController@edit']);		//店家編輯頁面
+    Route::get('{store_id}/editmenu', ['as' => 'store.editMenu', 'uses' => 'StoreController@editMenu']);		//店家編輯頁面
 	Route::post('{store_id}/update', ['as' => 'store.update', 'uses' => 'StoreController@update']);	//店家編輯更新
 
 	Route::get('{store_id}/show', ['as' => 'store.show', 'uses' => 'StoreController@show']);		//店家即時觀看訂單頁面
