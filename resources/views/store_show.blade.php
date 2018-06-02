@@ -59,25 +59,13 @@
                     <div class="card-header">我的店面</div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <a href="/store/mystore/1" class="list-group-item list-group-item-action">虎尾香腸</a>
-                            <a href="/store/mystore/2" class="list-group-item list-group-item-action active">虎尾米糕</a>
-                            <a href="/store/mystore/3" class="list-group-item list-group-item-action">虎尾蔥抓餅</a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="/store/create" class="btn btn-success"><i class="fa fa-fw fa-plus"></i>增加店面 </a>
+                            <a href="/store/1/show" class="list-group-item list-group-item-action">虎尾香腸</a>
+                            <a href="/store/2/show" class="list-group-item list-group-item-action active">虎尾米糕</a>
+                            <a href="/store/3/show" class="list-group-item list-group-item-action">虎尾蔥抓餅</a>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        
-
-        @if(Auth::user()->authority == "9")
-
-        @else
-            <div>你還沒有自己的店嗎? 
-                <button class="btn btn-primary">創立自己的店面</button>
-            </div>
-        @endif
         </div>
   </div>
   <!-- /.container-fluid-->
