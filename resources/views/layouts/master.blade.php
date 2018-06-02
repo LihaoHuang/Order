@@ -50,7 +50,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login">Logout</a>
+                    {{ link_to_route('logout','logout',null,['class' => 'btn btn-primary']) }}
                 </div>
             </div>
         </div>
@@ -73,8 +73,6 @@
     <!-- Custom scripts for this page-->
     <script src="{{ asset('js/sb-admin-datatables.min.js') }}"></script>
     <script src="{{ asset('js/sb-admin-charts.min.js') }}"></script>
-
-  </div>
 </body>
-
+@include('layouts.show_error')
 </html>

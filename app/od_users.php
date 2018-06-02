@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\od_users
@@ -28,8 +30,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\od_users wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\od_users whereUsername($value)
  */
-class od_users extends Model
+class od_users extends Authenticatable
 {
+    use Notifiable;
+
     protected  $table = 'od_users';
     protected  $primaryKey = 'id';
     public $timestamps = false;
@@ -39,5 +43,19 @@ class od_users extends Model
     public function od_stores()
     {
         return $this->hasMany(od_stores::class,'user_id');
+    }
+
+    /**
+     * Overrides the method to ignore the remember token.
+     * @param $key
+     * @param $value
+     */
+    public function setAttribute($key, $value)
+    {
+        $isRememberTokenAttribute = $key == $this->getRememberTokenName();
+        if (!$isRememberTokenAttribute)
+        {
+            parent::setAttribute($key, $value);
+        }
     }
 }

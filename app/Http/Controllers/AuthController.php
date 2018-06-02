@@ -1,23 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Services\UserService;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    /**
-     * @var model
-     */
-    
+    use AuthenticatesUsers;
 
+    protected $userService;
     /**
      * AuthController constructor.
-     * @param User_info        $user_info
      */
-    public function __constract()
+    public function __construct(UserService $service)
     {
-        
+        $this->userService = $service;
     }
     
     /**
@@ -27,7 +25,7 @@ class AuthController extends Controller
      */
     public function showLoginForm()
     {
-        //
+        return view('login');
     }
 
     /**
@@ -35,9 +33,14 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function login()
+    public function login(Request $request)
     {
-        //
+        $user = $this->userService->check($request->input('username'), $request->input('password'));
+        if (!is_null($user)) {
+            \Auth::login($user);
+            return redirect()->route('home.index');
+        }
+        return redirect()->back()->withInput($request->input())->withErrors(['msg' => '無此帳號or 密碼，請輸入正確的帳號密碼！']);
     }
 
     /**
@@ -47,7 +50,8 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        //
+        \Auth::logout();
+        return redirect()->route('home.index');
     }
 
     /**
@@ -57,7 +61,7 @@ class AuthController extends Controller
      */
     public function showRegistrationForm()
     {
-        //
+        return view('register');
     }
 
     /**
@@ -67,7 +71,7 @@ class AuthController extends Controller
      */
     public function register()
     {
-        //
+        return view('register');
     }
 
     /**
