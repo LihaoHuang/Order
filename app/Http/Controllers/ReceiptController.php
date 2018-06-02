@@ -22,7 +22,6 @@ class ReceiptController extends Controller
     public function index()
     {
         //
-        return view('receipt');
     }
 
     /**
@@ -36,6 +35,14 @@ class ReceiptController extends Controller
         return view('receipt_new', $data);
     }
 
+    public function show($id)
+    {
+        $data = [
+            'receipt' => $this->receiptService->get($id)
+        ];
+
+        return view('receipt',$data);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -68,8 +75,13 @@ class ReceiptController extends Controller
      */
     public function inviteStore(Request $request)
     {
-        $data = $request->all();
+        $data = $request->except('_token');
 
-        return redirect()->route('receipt.index', $data["invite_code"])->with("message", "成功進入系統!");
+        $receipt = $this->receiptService->getByInvite($data['invite_code']);
+
+        if(is_null($receipt))
+            return back()->withErrors(['msg' => '無效邀請碼']);
+
+        return redirect()->route('receipt.index', $receipt->id)->with("message", "成功進入系統!");
     }
 }

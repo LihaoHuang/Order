@@ -14,7 +14,7 @@
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
                     <div class="card-header">
-                        <h3 style="display:inline">虎尾米糕</h3> 訂單號碼 - {{123456}} (05:31:22)
+                        <h3 style="display:inline">{{ $receipt->od_stores->name }}</h3> 訂單號碼 - {{ $receipt->id }} ({{ $receipt->create_at->format('H:i:s') }})
                         <a href="/receipt/1/create" style="float:right" class="btn btn-primary">我要訂購</a>
                     </div>
                     <div class="card-body">
@@ -27,29 +27,17 @@
                         <table style="width:100%;" cellpadding="10" border='1'>
                             <tr style="background: gray">
                                 <th width="30%">訂單負責人</th>
-                                <td colspan="3" style="text-align:right;">{{Auth::user()->name}}</td> 
+                                <td colspan="3" style="text-align:right;">{{$receipt->od_users->name}}</td>
                             </tr>
-                            <tr>
-                                <th width="30%">奶茶(大) * 5</th>
-                                <td>100元</td> 
-                                <th width="30%">滷肉飯 * 6</th>
-                                <td>180元</td>
-                            </tr>
-                            <tr>
-                                <th width="30%">清蒸鮭魚 * 1</th>
-                                <td>120元</td> 
-                                <th width="30%">滷蛋 * 3</th>
-                                <td>30元</td>
-                            </tr>
-                            <tr>
-                                <th width="30%">雞腿飯 * 3</th>
-                                <td>240元</td> 
-                                <th width="30%">豬腳飯 * 1</th>
-                                <td>80元</td>
-                            </tr>
+                            @foreach($receipt->od_details as $key => $detail)
+                                <tr>
+                                    <th width="30%">{{ $detail->od_menus->food_name }} * {{ $detail->num }}</th>
+                                    <td>{{ $detail->od_menus->cost }}元</td>
+                                </tr>
+                            @endforeach
                             <tr style="background: gray">
                                 <th>目前總計</th>
-                                <td colspan="3" style="text-align:right;">750元</th>
+                                <td colspan="3" style="text-align:right;">{{ $detail->od_menus->cost * $detail->num }}元</th>
                             </tr>
                         </table>
                     </div>
