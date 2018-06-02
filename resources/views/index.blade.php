@@ -145,7 +145,7 @@
           <!-- /Card row-->
 
         <div class="row">
-            <div class="col-xl-8 col-sm-12">
+            <div class="col-xl-9 col-sm-12">
                 <!-- Example DataTables Card-->
                 <div class="card mb-3">
                     <div class="card-header">

@@ -1,6 +1,6 @@
  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="/">阿德(Order)訂餐</a>
+    <a class="navbar-brand" href="/"><img style="width: 10rem;max-width: 10rem;" src="{{ asset('img/order.png') }}"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,13 +53,18 @@
             </div>
           </form>
         </li>
+        @if(Auth::check())
+        <li>
+          <h3><span class="badge badge-secondary">{{Auth::user()->name}}，你好</span></h3>
+        </li>
+        @endif
         <li class="nav-item">
         @if(Auth::check())
             <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-              <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-          @else
+              <i class="fa fa-fw fa-sign-out"></i>登出</a>
+          @else 
             <a href="{{ route('login') }}" class="nav-link">
-            <i class="fa fa-fw fa-sign-in"></i>Login</a>
+            <i class="fa fa-fw fa-sign-in"></i>登入</a>
         @endif
         </li>
       </ul>
