@@ -31,8 +31,9 @@ class od_menus extends Model
 {
     protected  $table = 'od_menus';
     protected  $primaryKey = 'id';
+    public $timestamps = false;
     protected $fillable = ['id', 'store_id', 'sort', 'classify', 'food_name', 'cost'];
-    protected $dates = ['create_date', 'modify_date'];
+    protected $dates = ['create_at', 'update_at'];
 
     public function od_stores()
     {

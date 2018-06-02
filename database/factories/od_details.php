@@ -16,5 +16,7 @@ $factory->define(od_details::class, function (Faker $faker) {
         'receipt_id' => $faker->numberBetween(1,$receiptNumber),
         'menu_id' => $faker->numberBetween(1,$menuNumber),
         'num' => $faker->randomDigit,
+        'nick_name' => $faker->lastName,
+        'costed' => $faker->boolean
     ];
 });

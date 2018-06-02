@@ -20,6 +20,7 @@ class od_food extends Model
 {
     protected  $table = 'od_food';
     protected  $increment = false;
+    public $timestamps = false;
     protected $fillable = ['menu_id', 'cal', 'g'];
 
     public function od_menus()

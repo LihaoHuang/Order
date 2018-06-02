@@ -13,12 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call([
-            od_detailsSeeder::class,
-            od_foodSeeder::class,
-            od_menusSeeder::class,
-            od_receiptSeeder::class,
+            od_usersSeeder::class,
             od_storesSeeder::class,
-            od_usersSeeder::class
+            od_receiptSeeder::class,
+            od_menusSeeder::class,
+            od_foodSeeder::class,
+            od_detailsSeeder::class
         ]);
     }
 }

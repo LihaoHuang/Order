@@ -32,8 +32,9 @@ class od_users extends Model
 {
     protected  $table = 'od_users';
     protected  $primaryKey = 'id';
-    protected $fillable = ['id', 'name', 'username', 'password', 'phone', 'email', 'authority'];
-    protected $dates = ['create_date', 'modify_date'];
+    public $timestamps = false;
+    protected $fillable = ['id', 'name', 'username', 'password', 'phone', 'email', 'authority','create_at', 'update_at'];
+    protected $dates = ['create_at', 'update_at'];
 
     public function od_stores()
     {

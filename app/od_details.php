@@ -25,7 +25,8 @@ class od_details extends Model
 {
     protected  $table = 'od_details';
     protected  $increment = false;
-    protected $fillable = ['receipt_id' ,'menu_id', 'num'];
+    public $timestamps = false;
+    protected $fillable = ['receipt_id' ,'menu_id', 'num', 'nick_name', 'costed'];
 
     public function od_receipt()
     {

@@ -26,8 +26,9 @@ class od_receipt extends Model
 {
     protected  $table = 'od_receipt';
     protected  $primaryKey = 'id';
+    public $timestamps = false;
     protected $fillable = ['id', 'user_id', 'store_id', 'uni_number'];
-    protected $dates = ['create_date'];
+    protected $dates = ['create_at'];
 
     public function od_details()
     {
