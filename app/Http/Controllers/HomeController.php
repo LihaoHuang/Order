@@ -13,9 +13,9 @@ class HomeController extends Controller
 
     /**
      * HomeController constructor.
-     * @param User_info        $user_info
+     * @param User_info $user_info
      */
-    public function __constract()
+    public function __construct()
     {
         
     }
