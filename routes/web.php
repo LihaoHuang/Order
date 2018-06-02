@@ -23,11 +23,12 @@
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);		//首頁
 
 Route::prefix('store')->group(function () {
+
 	Route::get('create', ['as' => 'store.create', 'uses' => 'StoreController@create']);				//店家建立頁面
 	Route::post('store', ['as' => 'store.store', 'uses' => 'StoreController@store']);				//店家建立儲存
 
 	Route::get('mystore/{store_id?}', ['as' => 'store.mystore', 'uses' => 'StoreController@mystore']);	//店家詳細頁面(店家負責人視角)
-	Route::get('{store_id}', ['as' => 'store.index', 'uses' => 'StoreController@index']);			//店家詳細頁面(使用者視角)
+	Route::get('{store_id?}', ['as' => 'store.index', 'uses' => 'StoreController@index']);			//店家詳細頁面(使用者視角)
 
 
 	Route::get('{store_id}/edit', ['as' => 'store.edit', 'uses' => 'StoreController@edit']);		//店家編輯頁面
@@ -39,8 +40,8 @@ Route::prefix('store')->group(function () {
 Route::prefix('receipt')->group(function () {
 	Route::get('{receipt_id}', ['as' => 'receipt.index', 'uses' => 'ReceiptController@index']);		//訂單統計頁面
 
-	Route::get('create', ['as' => 'receipt.create', 'uses' => 'ReceiptController@create']);			//訂單建立頁面
-	Route::post('store', ['as' => 'receipt.store', 'uses' => 'ReceiptController@store']);			//訂單建立儲存
+	Route::get('{store_id}/create', ['as' => 'receipt.create', 'uses' => 'ReceiptController@create']);			//訂單建立頁面
+	Route::post('{store_id}/store', ['as' => 'receipt.store', 'uses' => 'ReceiptController@store']);			//訂單建立儲存
 });
 
 Route::prefix('detail')->group(function () {
