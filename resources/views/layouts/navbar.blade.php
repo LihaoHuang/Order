@@ -15,7 +15,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="charts">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">歷屆訂單</span>
+            <span class="nav-link-text">我的訂單</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
@@ -28,7 +28,7 @@
               <a href="/store/mystore">我的菜單</a>
             </li>
             <li>
-              <a href="navbar">即時訂單</a>
+              <a href="/store/5/show">即時訂單</a>
             </li>
           </ul>
         </li>

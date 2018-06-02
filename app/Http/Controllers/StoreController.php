@@ -72,8 +72,9 @@ class StoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($store_id)
     {
-        //
+        // dd($store_id);
+        return view("store_show");
     }
 }
