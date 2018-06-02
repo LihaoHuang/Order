@@ -1,40 +1,48 @@
 @extends('layouts.logmaster')
 @section('title', '註冊')
 @section('content')
+  <style type="text/css">
+    body{
+        background-image: url('https://picsum.photos/1600/900?image=0&blur');
+    }
+  </style>
   <div class="container">
+    <div align="center">
+      <img style="width: 80vw;max-width: 40rem;" src="{{ asset('img/order.png') }}">
+    </div>
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Register an Account</div>
       <div class="card-body">
         <form>
           <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="exampleInputName">First name</label>
-                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
-              </div>
-              <div class="col-md-6">
-                <label for="exampleInputLastName">Last name</label>
-                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <label for="account">Account</label>
+            <input class="form-control" id="account" type="text" aria-describedby="nameHelp" placeholder="Enter first name" required>
           </div>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="exampleInputPassword1">Password</label>
-                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+                <label for="password">Password</label>
+                <input class="form-control" id="password" type="password" placeholder="Password" required>
               </div>
               <div class="col-md-6">
-                <label for="exampleConfirmPassword">Confirm password</label>
-                <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
+                <label for="confirmPassword">Confirm password</label>
+                <input class="form-control" id="confirmPassword" type="password" placeholder="Confirm password" required>
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login">Register</a>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" id="name" type="text" aria-describedby="nameHelp" placeholder="Enter first name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input class="form-control" id="phone" type="number" aria-describedby="emailHelp" placeholder="Enter phone" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block">Register</button>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login">Login Page</a>

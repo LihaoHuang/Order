@@ -1,9 +1,16 @@
 @extends('layouts.logmaster')
 @section('title', '登入')
 @section('content')
+  <style type="text/css">
+    body{
+        background-image: url('https://picsum.photos/1600/900?image=0&blur');
+    }
+  </style>
   <div class="container">
+    <div align="center">
+      <img style="width: 80vw;max-width: 40rem;" src="{{ asset('img/order.png') }}">
+    </div>
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Login</div>
       <div class="card-body">
         {{ Form::open(['method' => 'post', 'route' => 'login']) }}
           <div class="form-group">
