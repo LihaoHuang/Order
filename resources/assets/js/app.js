@@ -23,9 +23,23 @@ window.Vue = require('vue');
 
 import HomeTable from './components/HomeTable.vue';
 
-const result = new Vue({
+let type = new Vue({
+    el: "#type",
+    methods: {
+        select(type){
+            result.sendKey(type);
+        }
+    }
+});
+
+let result = new Vue({
     el: '#result',
     components: {
         'home-table': HomeTable
+    },
+    methods:{
+        sendKey(type){
+            this.$refs.result.selectType(type);
+        }
     }
 });

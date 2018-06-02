@@ -51,7 +51,7 @@
                     <i class="fa fa-newspaper-o"></i> 餐點種類
                 </div>
                 <hr class="mt-4">
-                <div class="row">
+                <div class="row" id="type">
                     <div class="col-xl-3 col-sm-4 mb-3">
                         <!-- Example Social Card-->
                         <div class="card mb-3">
@@ -60,7 +60,7 @@
                                      src="https://unsplash.it/500/250?image=610" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">飲料</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('飲料')">飲料</a></h6>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                                      src="https://unsplash.it/500/250?image=180" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">中餐</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('中餐')">中餐</a></h6>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                                      src="https://unsplash.it/500/250?image=190" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">早午餐</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('早午餐')">早午餐</a></h6>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                                      src="https://unsplash.it/500/250?image=200" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">西餐</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('西餐')">西餐</a></h6>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                                      src="https://unsplash.it/500/250?image=210" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">冰品</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('冰品')">冰品</a></h6>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                                      src="https://unsplash.it/500/250?image=220" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">隱藏美食</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('隱藏美食')">隱藏美食</a></h6>
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                                      src="https://unsplash.it/500/250?image=230" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">甜點</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('甜點')">甜點</a></h6>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                                      src="https://unsplash.it/500/250?image=240" alt="">
                             </a>
                             <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">小吃</a></h6>
+                                <h6 class="card-title mb-1"><a href="#dataTable" @click="select('小吃')">小吃</a></h6>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                 <!-- /Card row-->
             </div>
             <div class="row" id="result">
-                <home-table :rows="{{ $stores->toJson(JSON_UNESCAPED_UNICODE) }}"></home-table>
+                <home-table ref="result" :rows="{{ $stores->toJson(JSON_UNESCAPED_UNICODE)  }}"></home-table>
 
                 <div class="col-xl-3 col-sm-12">
                     <!-- Example Notifications Card-->
