@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    {{ Form::open(['id'=>'receipt_crate','method' => 'POST','route'=> ['receipt.store','1'], 'files'=>true]) }}
+                    {{ Form::open(['id'=>'receipt_crate','method' => 'POST','route'=> ['detail.store','invite_code'=>'111111'], 'files'=>true]) }}
                     <div class="card-header">訂單資訊</div>
                     <div class="card-body">
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>

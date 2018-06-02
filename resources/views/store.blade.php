@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header"><h2 style="display:inline;">虎尾香腸</h2><a href="/receipt/1/create" style="float:right;" class="btn btn-primary">我要訂購</a></div>
+                    <div class="card-header"><h2 style="display:inline;">虎尾香腸</h2><a href="/receipt/1/create" style="float:right;" class="btn btn-primary">建立訂單</a></div>
                     <div class="card-body">
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飯食</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>

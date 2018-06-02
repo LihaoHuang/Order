@@ -42,7 +42,7 @@ class ReceiptController extends Controller
     public function create(Request $request, $store_id)
     {
         $data['data'] = $this->receiptService->get($store_id);
-        return view('receipt_new', $data);
+        return view('receipt_create', $data);
     }
 
     public function show($id)
@@ -62,8 +62,8 @@ class ReceiptController extends Controller
     public function store(Request $request)
     {
         //
-        $receipt_id = 111111;
-        return redirect()->route('receipt.index', $receipt_id)->with("message", "訂購成功，請向負責人付款 50 元!");
+        $receipt_id = 9;
+        return redirect()->route('receipt.index', $receipt_id);
     }
 
     /**
