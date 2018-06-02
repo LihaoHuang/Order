@@ -6,9 +6,9 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">首頁</a>
         </li>
-        <li class="breadcrumb-item active">Charts</li>
+        <li class="breadcrumb-item active">我的菜單</li>
       </ol>
       <!-- Area Chart Example-->
       <div class="card mb-3">

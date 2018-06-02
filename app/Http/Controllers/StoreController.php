@@ -13,7 +13,17 @@ class StoreController extends Controller
      */
     public function index()
     {
-        //
+        return view("store");
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function mystore()
+    {
+        return view("mystore");
     }
 
     /**
