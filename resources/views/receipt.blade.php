@@ -49,10 +49,10 @@
                     <div class="card-header">店家資訊</div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <div class="list-group-item list-group-item-action list-group-item-primary">店名:虎尾香腸</div>
-                            <div class="list-group-item list-group-item-action list-group-item-primary">負責人:威傑尬阿黑</div>
-                            <div class="list-group-item list-group-item-action list-group-item-primary"><a href="https://www.google.com.tw/maps?q=雲林縣虎尾鎮公安路97號" target="_blank">地址:雲林縣虎尾鎮公安路97號</a></div>
-                            <div class="list-group-item list-group-item-action list-group-item-primary">電話:0912345678</div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary">店名:{{ $receipt->od_stores->name }}</div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary">負責人: {{ $receipt->od_stores->od_users->name }}</div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary"><a href="https://www.google.com.tw/maps?q={{ $receipt->od_stores->address }}" target="_blank">地址:{{ $receipt->od_stores->address }}</a></div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary">電話: {{ $receipt->od_stores->phone }}</div>
                         </ul>
                     </div>
                 </div>

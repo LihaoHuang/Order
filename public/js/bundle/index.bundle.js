@@ -36550,7 +36550,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -36561,6 +36561,14 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -36659,107 +36667,123 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "form-inline" }, [
-    _c("div", { staticClass: "form-group" }, [
-      _c(
-        "ul",
-        { staticClass: "pagination pagination-sm" },
-        [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-10" }, [
+        _c("div", { staticClass: "form-group" }, [
           _c(
-            "li",
-            { staticClass: "page-item", class: { disabled: _vm.prevBtn } },
+            "ul",
+            { staticClass: "pagination pagination-sm" },
             [
-              _c("a", { staticClass: "page-link", on: { click: _vm.prev } }, [
-                _vm._v("«上一頁")
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _vm._l(_vm.max, function(n) {
-            return _c(
-              "li",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.show(n),
-                    expression: "show(n)"
-                  }
-                ],
-                staticClass: "page-item",
-                class: { active: _vm.equal(n) }
-              },
-              [
-                _c(
-                  "a",
-                  {
-                    staticClass: "page-link",
-                    attrs: { id: n },
-                    on: { click: _vm.set }
-                  },
-                  [_vm._v(_vm._s(n))]
-                )
-              ]
-            )
-          }),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "page-item", class: { disabled: _vm.nextBtn } },
-            [
-              _c("a", { staticClass: "page-link", on: { click: _vm.next } }, [
-                _vm._v("下一頁»")
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("li", { staticClass: "page-item disabled" }, [
-            _c("a", { attrs: { disabled: "true" } }, [
-              _vm._v("一頁顯示最多 "),
               _c(
-                "span",
-                { staticStyle: { "font-weight": "bold", color: "orangered" } },
-                [_vm._v(_vm._s(_vm.divided))]
+                "li",
+                { staticClass: "page-item", class: { disabled: _vm.prevBtn } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "page-link", on: { click: _vm.prev } },
+                    [_vm._v("«上一頁")]
+                  )
+                ]
               ),
-              _vm._v("\n                筆 / 共 " + _vm._s(_vm.max) + " 頁")
-            ])
-          ])
-        ],
-        2
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "form-group" }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.jump,
-            expression: "jump"
-          }
-        ],
-        staticClass: "form-control",
-        attrs: { type: "text", placeholder: "輸入頁碼，並按下確認鍵" },
-        domProps: { value: _vm.jump },
-        on: {
-          keyup: function($event) {
-            if (
-              !("button" in $event) &&
-              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-            ) {
-              return null
+              _vm._v(" "),
+              _vm._l(_vm.max, function(n) {
+                return _c(
+                  "li",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.show(n),
+                        expression: "show(n)"
+                      }
+                    ],
+                    staticClass: "page-item",
+                    class: { active: _vm.equal(n) }
+                  },
+                  [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "page-link",
+                        attrs: { id: n },
+                        on: { click: _vm.set }
+                      },
+                      [_vm._v(_vm._s(n))]
+                    )
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "li",
+                { staticClass: "page-item", class: { disabled: _vm.nextBtn } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "page-link", on: { click: _vm.next } },
+                    [_vm._v("下一頁»")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", [
+                _c("a", { attrs: { disabled: "true" } }, [
+                  _vm._v("一頁顯示最多 "),
+                  _c(
+                    "span",
+                    {
+                      staticStyle: { "font-weight": "bold", color: "orangered" }
+                    },
+                    [_vm._v(_vm._s(_vm.divided))]
+                  ),
+                  _vm._v(
+                    "\n                        筆 / 共 " +
+                      _vm._s(_vm.max) +
+                      " 頁"
+                  )
+                ])
+              ])
+            ],
+            2
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-2" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.jump,
+                expression: "jump"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "text", placeholder: "輸入頁碼，並按下確認鍵" },
+            domProps: { value: _vm.jump },
+            on: {
+              keyup: function($event) {
+                if (
+                  !("button" in $event) &&
+                  _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                ) {
+                  return null
+                }
+                return _vm.transport($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.jump = $event.target.value
+              }
             }
-            return _vm.transport($event)
-          },
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.jump = $event.target.value
-          }
-        }
-      })
+          })
+        ])
+      ])
     ])
   ])
 }
@@ -36840,7 +36864,7 @@ var render = function() {
             ),
             _vm._v(" "),
             _c("bs-pagination", {
-              attrs: { inject: "filtered", page: "20", "bar-num": "10" }
+              attrs: { inject: "filtered", page: "10", "bar-num": "10" }
             })
           ],
           1

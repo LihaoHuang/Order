@@ -23,11 +23,22 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
+                    {{ Form::open(['id'=>'receipt_crate','method' => 'POST','route'=> ['receipt.store','1'], 'files'=>true]) }}
+                    <div class="card-header">訂單資訊</div>
+                    <div class="card-body">
+                        <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
+                            <tr>
+                                <th>暱稱(必填)</th>
+                                <td>{{ Form::input('text', 'nick_name', null, ['class' => 'form-control', 'placeholder' => '請輸入暱稱(必填)']) }}</td>
+                                <th>統一編號(可選)</th>
+                                <td>{{ Form::input('text', 'uni_number', null, ['class' => 'form-control', 'placeholder' => '請輸入統一編號(可選)']) }}</td>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="card-header">菜單</div>
                     <div class="card-body">
 {{--                        {{ $ReceiptPresenter->menu_classify($data) }}--}}
 {{--                        {{ dd($data) }}--}}
-                        {{ Form::open(['id'=>'receipt_crate','method' => 'POST','route'=> ['receipt.store','1'], 'files'=>true]) }}
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飯食</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
                             <tr>
