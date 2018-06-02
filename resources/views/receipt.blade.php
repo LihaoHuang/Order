@@ -27,7 +27,9 @@
                         <table style="width:100%;" cellpadding="10" border='1'>
                             <tr style="background: gray">
                                 <th width="30%">訂單負責人</th>
-                                <td colspan="3" style="text-align:right;">{{Auth::user()->name}}</td> 
+                                <td>{{Auth::user()->name}}</td>
+                                <th width="30%">統一編號</th>
+                                <td>無</td>
                             </tr>
                             <tr>
                                 <th width="30%">奶茶(大) * 5</th>
