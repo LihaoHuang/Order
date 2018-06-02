@@ -69,9 +69,24 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function register()
+    public function register(Request $request)
     {
-        return view('register');
+        $validator = \Validator::make($request->all(),[
+            'username' => 'unique:od_users',
+            'password' => 'confirmed'
+        ],[
+            'username.unique' => '帳號已存在',
+            'password.confirmed' => '「密碼」與「確認密碼」資料不符'
+        ]);
+
+        if($validator->fails()){
+            return back()->withInput($request->all())->withErrors($validator->errors());
+        } else {
+            $user = $this->userService->create($request->except(['_token','password_confirmation']));
+            \Auth::login($user);
+        }
+
+        return redirect()->route('home.index');
     }
 
     /**

@@ -36,5 +36,11 @@ class UserService
         return null;
     }
 
+    public function create(Array $data){
+        $data['authority'] = 1;
+        $data['password'] = \Hash::make($data['password']);
+        return $this->od_users->create($data);
+}
+
 
 }
