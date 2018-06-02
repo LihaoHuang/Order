@@ -127,7 +127,7 @@
         /* Go Top 按鈕 */
         #goTop {
             position: fixed;
-            bottom: 5rem; /* 與下方的距離, 也可改為百分比, 即為距離螢幕下方的百分比 */
+            bottom: 10rem; /* 與下方的距離, 也可改為百分比, 即為距離螢幕下方的百分比 */
             right: 1rem; /* 與右方的距離 */
             width: 50px; /* 按鈕原始寬度 */
             height: 50px; /* 按鈕原始高度 */
