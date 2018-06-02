@@ -36,10 +36,14 @@ class od_receipt extends Model
     }
 
     public function od_users(){
-        return $this->belongsTo(od_users::class,'id','user_id');
+        return $this->belongsTo(od_users::class,'user_id','id');
     }
 
     public function od_stores(){
-        return $this->belongsTo(od_stores::class,'id','store_id');
+        return $this->belongsTo(od_stores::class,'store_id','id');
+    }
+
+    public function  od_menus(){
+        return $this->hasOne(od_menus::class,'');
     }
 }

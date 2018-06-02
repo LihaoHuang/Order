@@ -38,7 +38,7 @@ class od_stores extends Model
 
     public function od_users()
     {
-        return $this->belongsTo(od_users::class,'id','user_id');
+        return $this->belongsTo(od_users::class,'user_id','id');
     }
 
     public function od_menus(){

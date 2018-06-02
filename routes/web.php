@@ -38,7 +38,7 @@ Route::prefix('store')->group(function () {
 });
 
 Route::prefix('receipt')->group(function () {
-	Route::get('{receipt_id}', ['as' => 'receipt.index', 'uses' => 'ReceiptController@index']);		//訂單統計頁面
+	Route::get('{receipt_id}', ['as' => 'receipt.index', 'uses' => 'ReceiptController@show']);		//訂單統計頁面
 
 	Route::get('{store_id}/create', ['as' => 'receipt.create', 'uses' => 'ReceiptController@create']);			//訂單建立頁面
 	Route::post('{store_id}/store', ['as' => 'receipt.store', 'uses' => 'ReceiptController@store']);			//訂單建立儲存
