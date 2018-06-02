@@ -37,7 +37,7 @@ class od_menus extends Model
 
     public function od_stores()
     {
-        return $this->belongsTo(od_stores::class,'id','store_id');
+        return $this->belongsTo(od_stores::class,'store_id','id');
     }
 
     public function od_food() {

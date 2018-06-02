@@ -15,7 +15,7 @@ class ReceiptService
     }
 
     public function get($id){
-        return $this->od_receipt->with(['od_users','od_stores.od_menus','od_details'])->find($id);
+        return $this->od_receipt->with(['od_users','od_stores','od_details'])->find($id);
     }
 
     public function getByInvite($invite_code){

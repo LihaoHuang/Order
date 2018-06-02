@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\StoreService;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
+
+    protected $storeService;
+    public function __construct(StoreService $service)
+    {
+        $this->storeService = $service;
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +22,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        return view("store");
+        //
     }
 
     /**
@@ -74,7 +83,10 @@ class StoreController extends Controller
      */
     public function show($store_id)
     {
-        // dd($store_id);
-        return view("store_show");
+        $data = [
+            'store' => $this->storeService->get($store_id)
+        ];
+//        dd($data['store']);
+        return view("store",$data);
     }
 }

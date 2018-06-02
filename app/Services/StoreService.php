@@ -15,4 +15,9 @@ class StoreService
     public function all(){
         return $this->od_stores->all();
     }
+
+    public function get($id)
+    {
+        return $this->od_stores->with(['od_menus'])->find($id);
+    }
 }

@@ -21,78 +21,41 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header"><h2 style="display:inline;">虎尾香腸</h2><a href="/receipt/1/create" style="float:right;" class="btn btn-primary">我要訂購</a></div>
+                    <div class="card-header"><h2 style="display:inline;">{{ $store->name }}</h2>{{ link_to_route('receipt.create','我要訂購',[$store->id],['style' => 'float:right;', 'class' => 'btn btn-primary']) }}</div>
                     <div class="card-body">
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飯食</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
-                            <tr>
-                                <th>米糕</th>
-                                <td>100元</td> 
-                                <th>滷肉飯(大)</th>
-                                <td>30元</td>
-                            </tr>
-                            <tr>
-                                <th>竹筍飯</th>
-                                <td>50元</td> 
-                                <th>滷肉飯(小)</th>
-                                <td>25元</td>
-                            </tr>
-                            <tr>
-                                <th>控肉飯</th>
-                                <td>70元</td> 
-                                <th>豬腳飯</th>
-                                <td>80元</td>
-                            </tr>
-                            <tr>
-                                <th>雞腿飯</th>
-                                <td>80元</td> 
-                                <th>排骨飯(小)</th>
-                                <td>70元</td>
-                            </tr>
+                            @foreach($store->od_menus as $menu)
+                                @if($menu->classify === "飯食")
+                                <tr>
+                                    <th>{{ $menu->food_name }}</th>
+                                    <td>{{ $menu->cost }}元</td>
+                                </tr>
+                                @endif
+                            @endforeach
                         </table>
-
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">小菜</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
-                            <tr>
-                                <th>竹筍</th>
-                                <td>20元</td> 
-                                <th>時蔬</th>
-                                <td>3元</td>
-                            </tr>
-                            <tr>
-                                <th>滷蛋</th>
-                                <td>10元</td> 
-                                <th>豆腐</th>
-                                <td>15元</td>
-                            </tr>
-                            <tr>
-                                <th>涼拌鴨腳</th>
-                                <td>30元</td> 
-                                <th>涼拌小黃瓜</th>
-                                <td>20元</td>
-                            </tr>
+                            @foreach($store->od_menus as $menu)
+                                @if($menu->classify === "小菜")
+                                    <tr>
+                                        <th>{{ $menu->food_name }}</th>
+                                        <td>{{ $menu->cost }}元</td>
+                                    </tr>
+                                @endif
+                            @endforeach
                         </table>
 
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飲料</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
-                            <tr>
-                                <th>紅茶(大)</th>
-                                <td>20元</td> 
-                                <th>紅茶(小)</th>
-                                <td>15元</td>
-                            </tr>
-                            <tr>
-                                <th>奶茶(大)</th>
-                                <td>20元</td> 
-                                <th>奶茶(小)</th>
-                                <td>15元</td>
-                            </tr>
-                            <tr>
-                                <th>豆漿(大)</th>
-                                <td>20元</td> 
-                                <th>豆漿(小)</th>
-                                <td>15元</td>
-                            </tr>
+                            @foreach($store->od_menus as $menu)
+                                @if($menu->classify === "飲料")
+                                    <tr>
+                                        <th>{{ $menu->food_name }}</th>
+                                        <td>{{ $menu->cost }}元</td>
+                                    </tr>
+                                @endif
+                            @endforeach
                         </table>
                     </div>
                 </div>
@@ -102,10 +65,10 @@
                     <div class="card-header">店家資訊</div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <div class="list-group-item list-group-item-action list-group-item-primary">店名:虎尾香腸</div>
-                            <div class="list-group-item list-group-item-action list-group-item-primary">負責人:威傑尬阿黑</div>
-                            <div class="list-group-item list-group-item-action list-group-item-primary"><a href="https://www.google.com.tw/maps?q=雲林縣虎尾鎮公安路97號" target="_blank">地址:雲林縣虎尾鎮公安路97號</a></div>
-                            <div class="list-group-item list-group-item-action list-group-item-primary">電話:0912345678</div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary">店名:{{ $store->name }}</div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary">負責人:{{ $store->od_users->name }}</div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary"><a href="https://www.google.com.tw/maps?q={{ $store->address }}" target="_blank">地址:{{ $store->address }}</a></div>
+                            <div class="list-group-item list-group-item-action list-group-item-primary">電話:{{ $store->phone }}</div>
                         </ul>
                     </div>
                 </div>

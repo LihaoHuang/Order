@@ -42,7 +42,7 @@ class od_stores extends Model
     }
 
     public function od_menus(){
-        return $this->hasOne(od_menus::class, 'store_id');
+        return $this->hasMany(od_menus::class, 'store_id');
     }
 
     public function od_receipt(){
