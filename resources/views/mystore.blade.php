@@ -130,7 +130,7 @@
                             <a href="/store/mystore/2" class="list-group-item list-group-item-action active">虎尾米糕</a>
                             <a href="/store/mystore/3" class="list-group-item list-group-item-action">虎尾蔥抓餅</a>
                             <a href="#" class="list-group-item list-group-item-action"></a>
-                            <li class="btn btn-success"><i class="fa fa-fw fa-plus"></i>增加店面 </li>
+                            <a href="/store/create" class="btn btn-success"><i class="fa fa-fw fa-plus"></i>增加店面 </a>
                         </ul>
                     </div>
                 </div>

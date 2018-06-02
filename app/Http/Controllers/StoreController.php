@@ -33,7 +33,7 @@ class StoreController extends Controller
      */
     public function create()
     {
-        //
+        return view('store_create');
     }
 
     /**
@@ -41,9 +41,10 @@ class StoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dd($data);
     }
 
     /**

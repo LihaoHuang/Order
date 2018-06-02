@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\ReceiptService;
 
 class ReceiptController extends Controller
 {
+    protected $receiptService;
+
+    public function __construct(ReceiptService $receiptService)
+    {
+        $this->receiptService = $receiptService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,6 +22,7 @@ class ReceiptController extends Controller
     public function index()
     {
         //
+        return view('receipt');
     }
 
     /**
@@ -21,9 +30,10 @@ class ReceiptController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $store_id)
     {
-        //
+        $data['data'] = $this->receiptService->get($store_id);
+        return view('receipt_new', $data);
     }
 
     /**
