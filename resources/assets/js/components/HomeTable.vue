@@ -24,7 +24,7 @@
                             <tr is="store-row" v-for="data in pages" :info="data"></tr>
                         </tbody>
                     </table>
-                    <bs-pagination inject="filtered" page="20" bar-num="10"></bs-pagination>
+                    <bs-pagination inject="filtered" page="10" bar-num="10"></bs-pagination>
                 </div>
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>

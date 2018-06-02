@@ -1,17 +1,25 @@
 <template>
     <div class='form-inline'>
-        <div class='form-group'>
-            <ul class='pagination pagination-sm'>
-                <li class='page-item' :class='{disabled: prevBtn}'><a class='page-link' @click='prev'>&laquo;上一頁</a></li>
-                <li class='page-item' v-for='n in max' :class='{active: equal(n)}' v-show='show(n)'><a class='page-link' :id=n @click='set'>{{ n }}</a></li>
-                <li class='page-item' :class='{disabled: nextBtn}'><a class='page-link' @click='next'>下一頁&raquo;</a></li>
-                <li class='page-item disabled'><a disabled='true'>一頁顯示最多 <span style='font-weight: bold; color:orangered;'>{{ divided }}</span>
-                    筆 / 共 {{ max }} 頁</a></li>
-            </ul>
-        </div>
-        <div class='form-group'>
-            <input type='text' class='form-control' v-model='jump' @keyup.enter='transport' placeholder='輸入頁碼，並按下確認鍵'/>
-        </div>
+        <div class="row">
+            <div class="col-10">
+                <div class='form-group'>
+                    <ul class='pagination pagination-sm'>
+                        <li class='page-item' :class='{disabled: prevBtn}'><a class='page-link' @click='prev'>&laquo;上一頁</a></li>
+                        <li class='page-item' v-for='n in max' :class='{active: equal(n)}' v-show='show(n)'><a class='page-link' :id=n @click='set'>{{ n }}</a></li>
+                        <li class='page-item' :class='{disabled: nextBtn}'><a class='page-link' @click='next'>下一頁&raquo;</a></li>
+                        <div>
+                            <a disabled='true'>一頁顯示最多 <span style='font-weight: bold; color:orangered;'>{{ divided }}</span>
+                            筆 / 共 {{ max }} 頁</a>
+                        </div>
+                    </ul>
+                </div>
+             </div>
+             <div class="col-2">
+                <div class='form-group'>
+                    <input type='text' class='form-control' v-model='jump' @keyup.enter='transport' placeholder='輸入頁碼，並按下確認鍵'/>
+                </div>
+            </div>
+         </div>
     </div>
 </template>
 
