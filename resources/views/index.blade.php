@@ -45,112 +45,113 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- 餐點-->
-                <div class="mb-0 mt-4">
-                    <i class="fa fa-newspaper-o"></i> 餐點種類
-                </div>
-                <hr class="mt-4">
-                <div class="row">
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=610" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">飲料</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=180" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">中餐</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=190" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">早午餐</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=200" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">西餐</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=210" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">冰品</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=220" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">隱藏美食</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=230" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">甜點</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-sm-4 mb-3">
-                        <!-- Example Social Card-->
-                        <div class="card mb-3">
-                            <a href="#">
-                                <img style="height: 5rem;" class="card-img-top img-fluid w-100"
-                                     src="https://unsplash.it/500/250?image=240" alt="">
-                            </a>
-                            <div class="card-body">
-                                <h6 class="card-title mb-1"><a href="#dataTable">小吃</a></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Card row-->
             </div>
+            
+            <!-- 餐點-->
+            <div class="mb-0 mt-4">
+                <i class="fa fa-newspaper-o"></i> 餐點種類
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=610" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">飲料</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=180" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">中餐</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=190" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">早午餐</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=200" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">西餐</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=210" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">冰品</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=220" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">隱藏美食</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=230" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">甜點</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-4 mb-3">
+                    <!-- Example Social Card-->
+                    <div class="card mb-3">
+                        <a href="#">
+                            <img style="height: 5rem;" class="card-img-top img-fluid w-100"
+                                 src="https://unsplash.it/500/250?image=240" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title mb-1"><a href="#dataTable">小吃</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Card row-->
+
             <div class="row" id="result">
                 <home-table :rows="{{ $stores->toJson(JSON_UNESCAPED_UNICODE) }}"></home-table>
 
