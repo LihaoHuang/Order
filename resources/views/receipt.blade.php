@@ -8,7 +8,7 @@
             <li class="breadcrumb-item">
                 <a href="#">首頁</a>
                 </li>
-            <li class="breadcrumb-item active">即時訂單</li>
+            <li class="breadcrumb-item active">訂單統計資訊</li>
         </ol>
         <div class="row">
             <div class="col-sm-9">
@@ -18,7 +18,17 @@
                         <a href="/receipt/1/create" style="float:right" class="btn btn-primary">我要訂購</a>
                     </div>
                     <div class="card-body">
-                        <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
+                        <style type="text/css">
+                            table{
+                                border:3px solid;
+                                border-color:#000;
+                            }
+                        </style>
+                        <table style="width:100%;" cellpadding="10" border='1'>
+                            <tr style="background: gray">
+                                <th width="30%">訂單負責人</th>
+                                <td colspan="3" style="text-align:right;">{{Auth::user()->name}}</td> 
+                            </tr>
                             <tr>
                                 <th width="30%">奶茶(大) * 5</th>
                                 <td>100元</td> 
@@ -37,9 +47,9 @@
                                 <th width="30%">豬腳飯 * 1</th>
                                 <td>80元</td>
                             </tr>
-                            <tr>
+                            <tr style="background: gray">
                                 <th>目前總計</th>
-                                <td colspan="3" style="text-align:right; ">750元</th>
+                                <td colspan="3" style="text-align:right;">750元</th>
                             </tr>
                         </table>
                     </div>
