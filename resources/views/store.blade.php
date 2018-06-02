@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header">菜單</div>
+                    <div class="card-header"><h2 style="display:inline;">虎尾香腸</h2><a href="/receipt/1/create" style="float:right;" class="btn btn-primary">我要訂購</a></div>
                     <div class="card-body">
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飯食</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
@@ -123,4 +123,20 @@
   </div>
   <!-- /.container-fluid-->
   <!-- /.content-wrapper-->
+    <style>
+        /* Go Top 按鈕 */
+        #goTop {
+            position: fixed;
+            bottom: 5rem; /* 與下方的距離, 也可改為百分比, 即為距離螢幕下方的百分比 */
+            right: 1rem; /* 與右方的距離 */
+            width: 50px; /* 按鈕原始寬度 */
+            height: 50px; /* 按鈕原始高度 */
+            opacity: 1; /* 按鈕原始透明度 */
+            z-index: 10;
+            cursor: pointer;
+        }
+    </style>
+    <!-- Go Top 按鈕 -->
+    <a href="/receipt/1/create" id="goTop" class="btn btn-primary" title="Back to Top">買</a>
+
 @endsection

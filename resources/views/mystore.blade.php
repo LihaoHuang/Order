@@ -21,26 +21,31 @@
         <div class="row">
             <div class="col-sm-9">
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header">店家資訊</div>
+                    <div class="card-header">店家資訊<button style="float:right" class="btn btn-primary">店家編輯</button></div>
                     <div class="card-body">
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
                             <tr>
                                 <th>店名</th>
                                 <td>虎尾米糕</td> 
+                                <th>類型</th>
+                                <td>小吃</td>
+                            </tr>
+                            <tr>
+                                <th>連絡電話</th>
+                                <td>0912345678</td>
                                 <th>負責人</th>
-                                <td>威傑尬阿黑</td>
+                                <td>威傑尬阿黑</td> 
                             </tr>
                             <tr>
                                 <th>住址</th>
                                 <td colspan="3">雲林縣虎尾鎮公安路97號</td> 
-                                
                             </tr>
                         </table>
                     </div>
                 </div>
 
                 <div class="card bg-light mb-3" style="margin-top: 1rem">
-                    <div class="card-header">菜單</div>
+                    <div class="card-header">菜單<button style="float:right" class="btn btn-primary">菜單編輯</button></div>
                     <div class="card-body">
                         <div class="alert alert-primary" style="margin-bottom:0;margin-top:1rem;" role="alert">飯食</div>
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
