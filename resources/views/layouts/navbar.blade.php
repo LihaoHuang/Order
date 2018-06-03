@@ -18,7 +18,7 @@
             <span class="nav-link-text">我的訂單</span>
           </a>
         </li>
-        @if(Auth::user()->authority == 9)
+
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-wrench"></i>
@@ -32,8 +32,7 @@
                 <a href="/store/5/show">即時訂單</a>
               </li>
             </ul>
-          </li>
-        @endif
+          </li> 
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

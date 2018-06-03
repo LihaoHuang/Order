@@ -1,98 +1,38 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Services;
 
+use App\od_users;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class UserService
 {
-    /**
-     * @var model
-     */
-    
+    protected $od_users;
 
-    /**
-     * HomeController constructor.
-     * @param User_info        $user_info
-     */
-    public function __constract()
+    public function __construct(od_users $users)
     {
-        
-    }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+        $this->od_users = $users;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    protected function get($parameter)
     {
-        //
+        $instance = $this->od_users->where('username',$parameter)->orWhere('email',$parameter)->first();
+        return is_null($instance)?new od_users():$instance;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function check($account,$password)
     {
-        //
+        $user = $this->get($account);
+        if(\Hash::check($password,$user->password)){
+            return $user;
+        }
+
+        return null;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function create(Array $data){
+        $data['authority'] = 1;
+        $data['password'] = \Hash::make($data['password']);
+        return $this->od_users->create($data);
     }
 }
