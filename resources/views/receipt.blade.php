@@ -66,13 +66,6 @@
             </div>
         </div>
 
-
-        @if(Auth::user()->authority == "9")
-        @else
-            <div>你還沒有自己的店嗎?
-                <button class="btn btn-primary">創立自己的店面</button>
-            </div>
-        @endif
         </div>
   </div>
   <!-- /.container-fluid-->

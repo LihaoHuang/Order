@@ -93,7 +93,7 @@ class ReceiptController extends Controller
         if(is_null($invite_code))
             return back()->withErrors(['msg' => '無效邀請碼']);
 
-        return redirect()->route('receipt.invite_show', $invite_code->id)->with("message", "成功進入系統!");
+        return redirect()->route('receipt.show', $invite_code->id)->with("message", "成功進入系統!");
     }
 
     public function show($id)
