@@ -30,7 +30,7 @@
                         <table style="width:100%" style="border:3px solid;" cellpadding="10" border='1'>
                             <tr>
                                 <th>暱稱(必填)</th>
-                                <td>{{ Form::input('text', 'nick_name', null, ['class' => 'form-control', 'placeholder' => '請輸入暱稱(必填)','required']) }}</td>
+                                <td>{{ Form::input('text', 'nick-name', null, ['class' => 'form-control', 'placeholder' => '請輸入暱稱(必填)','required']) }}</td>
                                 <th>統一編號(可選)</th>
                                 <td>{{ Form::input('text', 'uni_number', null, ['class' => 'form-control', 'placeholder' => '請輸入統一編號(可選)']) }}</td>
                             </tr>

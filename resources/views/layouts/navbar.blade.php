@@ -18,7 +18,6 @@
             <span class="nav-link-text">我的訂單</span>
           </a>
         </li>
-
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-wrench"></i>
@@ -28,11 +27,11 @@
               <li>
                 <a href="/store/mystore">我的菜單</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="/store/5/show">即時訂單</a>
-              </li>
+              </li> -->
             </ul>
-          </li> 
+          </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

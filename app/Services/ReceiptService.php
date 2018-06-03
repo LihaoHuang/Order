@@ -41,12 +41,12 @@ class ReceiptService
         foreach($data as $detail => $num){
             $detail = explode('_',$detail);
             if(count($detail) == 2){
-                $record = $this->od_details;
+                $record = new od_details();
                 $record->receipt_id = $receipt->id;
                 $record->menu_id = $detail[0];
                 $record->num = $num;
-                if(array_key_exists('nick_name',$data)){
-                    $record->nick_name = $data['nick_name'];
+                if(array_key_exists('nick-name',$data)){
+                    $record->nick_name = $data['nick-name'];
                 }
                 $record->costed = 0;
                 $record->save();
