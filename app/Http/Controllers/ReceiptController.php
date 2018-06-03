@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\StoreService;
 use Illuminate\Http\Request;
 use App\Services\ReceiptService;
 
 class ReceiptController extends Controller
 {
     protected $receiptService;
+    protected $storeService;
 
-    public function __construct(ReceiptService $receiptService)
+    public function __construct(ReceiptService $receiptService,StoreService $storeService)
     {
         $this->receiptService = $receiptService;
+        $this->storeService = $storeService;
     }
 
     /**
@@ -41,29 +44,27 @@ class ReceiptController extends Controller
      */
     public function create(Request $request, $store_id)
     {
-        $data['data'] = $this->receiptService->get($store_id);
+        $data = [
+            'receipt' => $this->receiptService->get($store_id),
+            'store' => $this->storeService->get($store_id)
+        ];
+
         return view('receipt_create', $data);
     }
 
-    public function show($id)
-    {
-        $data = [
-            'receipt' => $this->receiptService->get($id)
-        ];
 
-        return view('receipt',$data);
-    }
     /**
      * Display a listing of the resource.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        //
-        $receipt_id = 9;
-        return redirect()->route('receipt.index', $receipt_id);
+
+        $receipt = $this->receiptService->create($id,$request->except('_token'));
+
+        return redirect()->route('receipt.show', $receipt->id);
     }
 
     /**
@@ -93,5 +94,14 @@ class ReceiptController extends Controller
             return back()->withErrors(['msg' => '無效邀請碼']);
 
         return redirect()->route('receipt.invite_show', $invite_code->id)->with("message", "成功進入系統!");
+    }
+
+    public function show($id)
+    {
+        $data = [
+            'receipt' => $this->receiptService->get($id)
+        ];
+
+        return view('receipt',$data);
     }
 }

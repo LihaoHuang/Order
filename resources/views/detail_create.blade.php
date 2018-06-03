@@ -15,7 +15,7 @@
             <li class="breadcrumb-item">
                 <a href="/">首頁</a>
                 </li>
-            <li class="breadcrumb-item"><a href="{{ route('store.index') }}/1">店家</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('store.show') }}/1">店家</a></li>
             <li class="breadcrumb-item active"><a href="#">我要訂購</a></li>
         </ol>
         <div class="work" style="width: 100%; height: 5rem;">
@@ -114,7 +114,7 @@
                     </div>
                     <div class="bd-example offset-md-5" >
                         {{ Form::submit('送出', ['type'=>'button', 'class'=>'btn btn-primary']) }}
-                        <a href="{{ route('store.index') }}/1" class="btn btn-primary">取消</a>
+                        <a href="{{ route('store.show') }}/1" class="btn btn-primary">取消</a>
                     </div>
                     {{ Form::close() }}
                 </div>

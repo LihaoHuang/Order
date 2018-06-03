@@ -39,7 +39,7 @@ Route::prefix('store')->group(function () {
 });
 
 Route::prefix('receipt')->group(function () {
-	Route::get('{receipt_id}', ['as' => 'receipt.index', 'uses' => 'ReceiptController@show']);		//我的訂單統計頁面
+	Route::get('{receipt_id}', ['as' => 'receipt.show', 'uses' => 'ReceiptController@show']);		//我的訂單統計頁面
 
 	Route::get('invite_show/{invite_code}', ['as' => 'receipt.invite_show', 'uses' => 'ReceiptController@invite_show']);		//我的訂單統計頁面
 
